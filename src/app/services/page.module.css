@@ -1,0 +1,27 @@
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.filterChip {
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-container);
+  color: var(--foreground);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.filterChip:hover {
+  background: var(--surface-container-low);
+}
+
+.active {
+  background: var(--primary);
+  color: white;
+}
