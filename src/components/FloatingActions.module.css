@@ -24,7 +24,7 @@
 }
 
 .actionIcon:hover {
-  transform: translateY(-50%) scale(1.1); /* Preserve vertical centering while scaling */
+  transform: scale(1.1);
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }
 

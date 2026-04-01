@@ -72,7 +72,7 @@ export default function Services() {
                   <div className={styles.badgeOverlay}>{s.badge}</div>
                 </div>
                 <div className={styles.content}>
-                  <h3 className={s.cardTitle}>{s.name}</h3>
+                  <h3 className={styles.cardTitle}>{s.name}</h3>
                   <p className={styles.cardDesc}>{s.desc}</p>
                   <Link href="#" className={styles.readMore}>
                     Read More <span>→</span>
