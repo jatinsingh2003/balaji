@@ -1,60 +1,92 @@
 import Link from 'next/link';
 import styles from './page.module.css';
+import ReviewSlider from '@/components/ReviewSlider';
+import FAQ from '@/components/FAQ';
 
 export default function Home() {
   const features = [
-    { title: "Movement Intelligence", desc: "AI-powered biomechanical analysis for personalized recovery.", icon: "🧠" },
-    { title: "Predictive Outcomes", desc: "Data-driven insights to forecast your rehabilitation timeline.", icon: "📈" },
-    { title: "24/7 Digital Twin", desc: "A virtual counterpart tracking your progress around the clock.", icon: "👥" },
-    { title: "Automated Tracking", desc: "Effortless monitoring of your exercises and milestones.", icon: "⚙️" },
-  ];
-
-  const specialties = [
-    { title: "Chiropractor", desc: "Precise adjustments for skeletal health.", img: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=600&auto=format&fit=crop" },
-    { title: "Ergonomics", desc: "Optimizing your environment for efficiency.", img: "https://images.unsplash.com/photo-1576091160550-217359f48a1c?q=80&w=600&auto=format&fit=crop" },
-    { title: "Functional Strength", desc: "Building resilience for everyday life.", img: "https://images.unsplash.com/photo-1629909613654-28a3a7c4abd4?q=80&w=600&auto=format&fit=crop" },
-  ];
-
-  const team = [
-    { name: "Dr. Sarah Chen", role: "Chief Clinical Officer", img: "https://images.unsplash.com/photo-1559839734-2b71f1e3c77d?q=80&w=400&auto=format&fit=crop" },
-    { name: "Marcus Thorne", role: "Senior Physiotherapist", img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=400&auto=format&fit=crop" },
-    { name: "Elena Rodriguez", role: "Chiropractor", img: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=400&auto=format&fit=crop" },
-    { name: "Dr. James Wilson", role: "Orthopedic Specialist", img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=400&auto=format&fit=crop" },
+    { title: "Clinical Assessment", desc: "In-depth biomechanical evaluation by senior physiotherapists.", icon: "📋" },
+    { title: "Expert-Led Protocols", desc: "Evidence-based treatment pathways tailored to your recovery goals.", icon: "👨‍⚕️" },
+    { title: "Continuous Care", desc: "Ongoing support and progress monitoring from clinic to home.", icon: "🤝" },
+    { title: "Personalized Recovery", desc: "Custom exercise and rehabilitation plans for lasting results.", icon: "🎯" },
   ];
 
   return (
     <div>
       {/* Hero Section */}
       <section className={styles.hero}>
+        <div className={styles.heroOverlay}></div>
         <div className={styles.container}>
           <div className={styles.heroContent}>
-            <span className={styles.badge}>Next-Gen Rehabilitation</span>
-            <h1 className={styles.heroTitle}>Integrated Care with AI Precision.</h1>
+            <h1 className={styles.heroTitle}>Integrated Care with Clinical Excellence</h1>
             <p className={styles.heroSubtitle}>
-              Experience the future of rehabilitation where clinical expertise meets algorithmic accuracy.
+              Clinically guided care for pain relief, functional recovery, and long-term everyday performance.
             </p>
             <div className={styles.heroCtas}>
-              <Link href="/book" className="btn-primary">Book Appointment</Link>
-              <Link href="/callback" className="btn-secondary">Request Callback</Link>
-            </div>
-            {/* Added a Hero Image */}
-            <div className={styles.heroImageContainer}>
-              <img 
-                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1200&auto=format&fit=crop" 
-                alt="Modern Clinic" 
-                className={styles.heroImage}
-              />
+              <a href="tel:+919452791291" className={`${styles.ctaBtn} ${styles.ctaPrimary}`} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <img src="/phone-call.png" alt="" style={{ height: '20px', filter: 'brightness(0) invert(1)' }} />
+                Call Now
+              </a>
+              <a 
+                href="https://wa.me/919452791291" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={`${styles.ctaBtn} ${styles.ctaSecondary}`} 
+                style={{ display: 'flex', alignItems: 'center', gap: '10px' }}
+              >
+                <img src="/logo.png" alt="" style={{ height: '20px', filter: 'brightness(0) invert(1)' }} />
+                WhatsApp
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* AI Precision Recovery Section */}
-      <section className={styles.section}>
+      {/* Reviews Slider Section */}
+      <section className={styles.section} style={{ paddingBottom: 0 }}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>AI Precision Recovery</h2>
-            <p className={styles.heroSubtitle}>Advanced algorithmic tracking for faster, safer outcomes.</p>
+            <h2 className={styles.sectionTitle}>Patient Success Stories</h2>
+            <p className={styles.heroSubtitle} style={{ color: '#666' }}>Real feedback from our patients on Justdial.</p>
+          </div>
+        </div>
+        <ReviewSlider />
+      </section>
+
+      {/* Person Incharge Section */}
+      <section className={styles.inchargeSection}>
+        <div className={styles.container}>
+          <div className={styles.inchargeContent}>
+            <div className={styles.inchargeImageContainer}>
+              <div className={styles.inchargePlaceholder}>
+                <p style={{ fontSize: '14px', opacity: 0.5 }}>IMAGE PLACEHOLDER</p>
+                <p style={{ fontWeight: 600 }}>Person Incharge</p>
+              </div>
+            </div>
+            <div className={styles.inchargeInfo}>
+              <span className={styles.inchargeLabel}>Clinical Leadership</span>
+              <h2 className={styles.inchargeName}>Expert Guidance</h2>
+              <p className={styles.inchargeBio}>
+                Our clinic is led by top-tier clinical experts dedicated to restoring your vitality. 
+                With years of experience in advanced physiotherapy and sports rehabilitation, we provide 
+                curated care plans that prioritize your long-term health and performance.
+              </p>
+              <div style={{ marginTop: '32px' }}>
+                <Link href="/about" className="btn-primary" style={{ padding: '16px 36px', borderRadius: '50px' }}>
+                  Read More About Our Approach
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Clinical Framework Section */}
+      <section className={`${styles.section} ${styles.altSection}`}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>Precision Recovery Framework</h2>
+            <p className={styles.heroSubtitle} style={{ color: '#666' }}>Personalized clinical protocols for faster, safer outcomes.</p>
           </div>
           <div className={styles.grid}>
             {features.map((f, i) => (
@@ -68,46 +100,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Specialties Section */}
-      <section className={`${styles.section} section-alt`}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>Our Specialties</h2>
-          </div>
-          <div className={styles.grid}>
-            {specialties.map((s, i) => (
-              <div key={i} className={styles.featureCard}>
-                <div className={styles.imgThumbnail}>
-                  <img src={s.img} alt={s.title} className={styles.cardImg} />
-                </div>
-                <h3 className={styles.featureTitle} style={{marginTop: '16px'}}>{s.title}</h3>
-                <p className={styles.featureDesc}>{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>Thoroughly Vetted Experts</h2>
-            <p className={styles.heroSubtitle}>Led by scientific experts with decades of clinical experience.</p>
-          </div>
-          <div className={styles.teamGrid}>
-            {team.map((m, i) => (
-              <div key={i} className={styles.teamMember}>
-                <div className={styles.imgCircle}>
-                  <img src={m.img} alt={m.name} className={styles.circleImg} />
-                </div>
-                <h3 className={styles.memberName}>{m.name}</h3>
-                <p className={styles.memberRole}>{m.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* FAQ Section */}
+      <FAQ />
     </div>
   );
 }

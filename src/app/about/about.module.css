@@ -1,0 +1,228 @@
+.container {
+  padding: 0;
+  background: white;
+}
+
+.hero {
+  position: relative;
+  padding: 120px 0;
+  background: #f0f7f5; /* Light mint green from reference */
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.title {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 800;
+  color: #0F3B3B;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Intro Section */
+.section {
+  padding: 100px 0;
+}
+
+.introContent {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.introText {
+  flex: 1.2;
+}
+
+.sectionLabel {
+  color: #117366;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.sectionTitle {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #0F3B3B;
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.introImage {
+  flex: 1;
+  background: #eee;
+  aspect-ratio: 1/1;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Foundational Pillars with Hover Effect */
+.pillarGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.pillarCard {
+  background: white;
+  padding: 40px;
+  border-radius: 40px; /* More rounded as per screenshot */
+  border: 1px solid rgba(15, 59, 59, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.iconBox {
+  width: 50px;
+  height: 50px;
+  background: #f0f7f5;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: all 0.4s ease;
+}
+
+.pillarTitle {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0F3B3B;
+  margin: 0;
+  transition: color 0.4s ease;
+}
+
+.pillarDesc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+  margin: 0;
+  transition: color 0.4s ease;
+}
+
+/* Hover State - Matching cbphysiotherapy alignment */
+.pillarCard:hover {
+  background: #62948b; /* Specific teal from screenshot */
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(98, 148, 139, 0.2);
+}
+
+.pillarCard:hover .pillarTitle,
+.pillarCard:hover .pillarDesc {
+  color: white;
+}
+
+.pillarCard:hover .iconBox {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* 4-Step Journey */
+.journeyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.stepCard {
+  padding: 32px;
+  background: #f7f9fb;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.stepIcon {
+  width: 60px;
+  height: 60px;
+  background: #117366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.stepTitle {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #0F3B3B;
+  margin-bottom: 12px;
+}
+
+.stepLabel {
+  font-size: 14px;
+  font-weight: 700;
+  color: #117366;
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* Leadership Card */
+.leaderCard {
+  max-width: 400px;
+  margin: 60px auto 0;
+  text-align: center;
+}
+
+.leaderName {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #0F3B3B;
+  margin: 20px 0 8px;
+}
+
+.leaderTitle {
+  color: #117366;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .introContent {
+    flex-direction: column;
+    text-align: center;
+  }
+}

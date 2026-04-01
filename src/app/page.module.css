@@ -1,66 +1,117 @@
 .hero {
-  padding: clamp(60px, 15vw, 120px) 0 40px;
-  background: var(--background);
-  text-align: center;
+  position: relative;
+  height: 90vh; /* Specific high-impact hero height */
+  display: flex;
+  align-items: center;
+  background: url('/doctor-helping-patient-rehabilitation.jpg') center/cover no-repeat fixed;
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65); /* Increased from 0.45 for readability */
+  z-index: 1;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 .heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
   max-width: 900px;
   margin: 0 auto;
 }
 
-.badge {
-  display: inline-block;
-  background: var(--accent-mint);
-  color: var(--primary);
-  padding: 6px 16px;
-  border-radius: var(--radius-pill);
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 24px;
-}
-
 .heroTitle {
   font-family: var(--font-plus-jakarta), sans-serif;
-  font-size: clamp(32px, 8vw, 64px);
+  font-size: clamp(40px, 8vw, 76px); /* Specific massive title font size */
+  font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
 
 .heroSubtitle {
-  font-size: clamp(16px, 4vw, 20px);
-  color: var(--text-muted);
-  margin-bottom: 40px;
+  font-size: clamp(16px, 2vw, 20px);
+  max-width: 700px;
+  margin: 0 auto 48px;
+  opacity: 0.95;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .heroCtas {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 60px;
 }
 
-.heroImageContainer {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 40px 100px rgba(15, 59, 59, 0.1);
+.ctaBtn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 36px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.heroImage {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  aspect-ratio: 16/9;
+.ctaPrimary {
+  background: #117366; /* Specific dark teal from screenshot */
+  color: white;
+  border: 1px solid #117366;
 }
 
-/* Features section */
+.ctaSecondary {
+  background: white;
+  color: #0F3B3B;
+  border: 1px solid white;
+}
+
+.ctaBtn span {
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.ctaSecondary span {
+  background: rgba(0,0,0,0.05);
+}
+
+.ctaBtn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
 .section {
-  padding: clamp(40px, 10vw, 100px) 0;
+  padding: 100px 0;
+  background: white;
+}
+
+.sectionTitle {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #0F3B3B;
+  margin-bottom: 16px;
 }
 
 .sectionHeader {
@@ -68,104 +119,108 @@
   margin-bottom: 60px;
 }
 
-.sectionTitle {
-  font-family: var(--font-plus-jakarta), sans-serif;
-  font-size: clamp(24px, 6vw, 40px);
-}
-
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 100%, 280px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
 }
 
 .featureCard {
-  background: white;
-  padding: clamp(20px, 5vw, 40px);
-  border-radius: var(--radius-md);
-  transition: var(--transition-smooth);
-  display: flex;
-  flex-direction: column;
+  background: #f7f9fb;
+  padding: 40px;
+  border-radius: 24px;
+  transition: transform 0.3s;
 }
 
 .featureCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  transform: translateY(-8px);
 }
 
 .featureIcon {
-  font-size: 32px;
+  font-size: 40px;
   margin-bottom: 24px;
-}
-
-.imgThumbnail {
-  width: 100%;
-  aspect-ratio: 16/10;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 8px;
-}
-
-.cardImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .featureTitle {
   font-family: var(--font-plus-jakarta), sans-serif;
   font-size: 20px;
+  font-weight: 700;
+  color: #0F3B3B;
   margin-bottom: 12px;
 }
 
 .featureDesc {
-  color: var(--text-muted);
+  color: #666;
   font-size: 15px;
+  line-height: 1.6;
 }
 
-/* Team section */
-.teamGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
-  gap: 40px;
+.inchargeSection {
+  padding: 100px 0;
+  background: #f0f7f5;
 }
 
-.teamMember {
-  text-align: center;
+.inchargeContent {
+  display: flex;
+  gap: 60px;
+  align-items: center;
 }
 
-.imgCircle {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 24px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--surface-container);
-  border: 4px solid white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+.inchargeImageContainer {
+  flex: 1;
 }
 
-.circleImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.inchargePlaceholder {
+  aspect-ratio: 4/5;
+  background: white;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(15, 59, 59, 0.1);
 }
 
-.memberName {
-  font-family: var(--font-plus-jakarta), sans-serif;
-  font-size: 18px;
-  margin-bottom: 4px;
+.inchargeInfo {
+  flex: 1.2;
 }
 
-.memberRole {
-  color: var(--text-muted);
+.inchargeLabel {
+  color: #117366;
+  font-weight: 800;
   font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 16px;
 }
 
-@media (max-width: 480px) {
-  .heroCtas {
+.inchargeName {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #0F3B3B;
+  margin-bottom: 24px;
+}
+
+.inchargeBio {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    height: 80vh;
+  }
+  
+  .inchargeContent {
     flex-direction: column;
-    width: 100%;
-    align-items: stretch;
+    text-align: center;
+  }
+  
+  .heroTitle {
+    font-size: 48px;
   }
 }

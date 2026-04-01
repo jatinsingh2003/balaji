@@ -1,0 +1,41 @@
+.floatingContainer {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 2000;
+}
+
+.actionIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.actionIcon:hover {
+  transform: translateY(-50%) scale(1.1); /* Preserve vertical centering while scaling */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.fabIcon {
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .floatingContainer {
+    right: 16px;
+  }
+}

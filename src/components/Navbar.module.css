@@ -2,12 +2,12 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(247, 249, 251, 0.8);
+  background: rgba(247, 249, 251, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(15, 59, 59, 0.05);
-  padding: 16px 0;
-  transition: var(--transition-smooth);
+  padding: 12px 0;
+  transition: all 0.3s ease;
 }
 
 .navContainer {
@@ -19,13 +19,17 @@
   padding: 0 24px;
 }
 
-.logo {
-  font-family: var(--font-plus-jakarta), sans-serif;
-  font-size: clamp(18px, 4vw, 24px);
-  font-weight: 700;
-  color: var(--primary);
+.logoWrapper {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  white-space: nowrap;
+}
+
+.logoImg {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  transition: height 0.3s ease;
 }
 
 .navLinks {
@@ -43,7 +47,7 @@
 .phoneLink {
   font-size: 14px;
   font-weight: 600;
-  color: var(--primary);
+  color: #117366;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -51,56 +55,154 @@
 .link {
   font-family: var(--font-inter), sans-serif;
   font-size: 14px;
-  font-weight: 500;
-  color: var(--foreground);
+  font-weight: 600;
+  color: #333;
   text-decoration: none;
-  transition: var(--transition-smooth);
+  transition: all 0.2s ease;
   white-space: nowrap;
 }
 
 .link:hover {
-  color: var(--primary);
+  color: #117366;
 }
 
 .cta {
-  background: var(--primary);
+  background: #117366;
   color: white;
   padding: 10px 24px;
-  border-radius: var(--radius-pill);
+  border-radius: 50px;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  transition: var(--transition-smooth);
+  transition: all 0.3s ease;
   white-space: nowrap;
 }
 
-.cta:hover {
-  filter: brightness(1.2);
-  transform: translateY(-1px);
+.navIcon {
+  height: 20px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 8px;
+  object-fit: contain;
 }
 
-@media (max-width: 1100px) {
-  .navLinks {
-    gap: 16px;
-  }
+.phoneLink {
+  display: flex;
+  align-items: center;
 }
 
-@media (max-width: 900px) {
-  .navContainer {
-    flex-direction: column;
-    gap: 16px;
-    padding: 12px 16px;
+.phoneLink img {
+  filter: brightness(0.6) saturate(0); /* Match the clinical green color roughly */
+}
+
+/* Hamburger & mobile styles */
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.hamburger {
+  width: 25px;
+  height: 20px;
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #333;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) { top: 0px; }
+.hamburger span:nth-child(2) { top: 8px; }
+.hamburger span:nth-child(3) { top: 16px; }
+
+.hamburger.open span:nth-child(1) {
+  top: 8px;
+  transform: rotate(135deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+.hamburger.open span:nth-child(3) {
+  top: 8px;
+  transform: rotate(-135deg);
+}
+
+@media (max-width: 1200px) {
+  .logoImg { height: 80px; }
+}
+
+@media (max-width: 1024px) {
+  .menuButton {
+    display: block;
   }
-  
+
   .navLinks {
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
+    position: absolute;
+    top: 100%; /* Starts exactly below header */
+    left: 0;
     width: 100%;
+    height: auto; /* No longer covers full screen */
+    background: #0F3B3B;
+    flex-direction: column;
+    align-items: flex-start; /* Left aligned links like reference */
+    padding: 24px 32px;
+    gap: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .navLinksOpen {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .link {
+    color: white;
+    font-size: 18px; /* Slightly smaller to match list-style */
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .phoneLink {
+    color: #4CAF50;
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
   }
 
   .contactGroup {
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
-    justify-content: center;
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .logoImg { height: 60px; }
+  
+  /* When menu is open, make sure header background stays solid */
+  .navbar {
+    background: white;
   }
 }

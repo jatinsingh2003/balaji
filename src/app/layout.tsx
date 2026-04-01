@@ -3,6 +3,7 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingActions from "@/components/FloatingActions";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -17,8 +18,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Balaji Physio City Clinic | Integrated Care with AI Precision",
-  description: "Experience the future of rehabilitation where clinical expertise meets algorithmic accuracy. Premium physiotherapy and wellness services at Balaji Physio City Clinic.",
+  title: "Balaji PhysioCity | Integrated Care with Clinical Excellence",
+  description: "Experience professional rehabilitation where clinical expertise meets personalized care. Premium physiotherapy and wellness services at Balaji PhysioCity.",
 };
 
 export default function RootLayout({
@@ -34,6 +35,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <FloatingActions />
       </body>
     </html>
   );

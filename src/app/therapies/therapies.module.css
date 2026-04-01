@@ -1,0 +1,242 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero {
+  padding: 120px 0 80px;
+  text-align: center;
+  background: white;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: #a3edeb; /* secondary-container */
+  color: #00504f; /* on-secondary-fixed-variant */
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.heroTitle {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  color: #0F3B3B;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -0.03em;
+}
+
+.heroSubtitle {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  font-weight: 500;
+}
+
+.gridSection {
+  padding: 40px 0 100px;
+  background: #fbf9f8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.imgWrapper {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .cardImg {
+  transform: scale(1.1);
+}
+
+.cardContent {
+  padding: 32px;
+}
+
+.cardTitle {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0F3B3B;
+  margin-bottom: 12px;
+}
+
+.cardDesc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #117366;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 14px;
+  transition: gap 0.3s ease;
+}
+
+.readMore:hover {
+  gap: 12px;
+  text-decoration: underline;
+}
+
+.expertSection {
+  padding: 100px 0;
+  background: #0F3B3B; /* Deep Emerald from reference */
+  border-radius: 32px;
+  color: white;
+  overflow: hidden;
+}
+
+.expertGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.expertTitle {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.expertDesc {
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.primaryCta {
+  background: white;
+  color: #0F3B3B;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.secondaryCta {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.expertImgContainer {
+  position: relative;
+}
+
+.expertImg {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.3);
+}
+
+.expBadge {
+  position: absolute;
+  bottom: -24px;
+  left: -24px;
+  background: #a3edeb;
+  color: #00504f;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.expNumber {
+  display: block;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.expText {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .expertGrid {
+    grid-direction: column;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+  
+  .ctaGroup {
+    justify-content: center;
+  }
+  
+  .expBadge {
+    position: static;
+    display: inline-block;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .heroTitle {
+    font-size: 36px;
+  }
+}
