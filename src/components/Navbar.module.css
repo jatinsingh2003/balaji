@@ -28,8 +28,8 @@
 .logoImg {
   height: 100px;
   width: auto;
-  object-fit: contain;
-  transition: height 0.3s ease;
+  object-fit: cover;
+  transition: height 0.9s ease;
 }
 
 .navLinks {
@@ -92,7 +92,8 @@
 }
 
 .phoneLink img {
-  filter: brightness(0.6) saturate(0); /* Match the clinical green color roughly */
+  filter: brightness(0.6) saturate(0);
+  /* Match the clinical green color roughly */
 }
 
 /* Hamburger & mobile styles */
@@ -124,25 +125,37 @@
   transition: .25s ease-in-out;
 }
 
-.hamburger span:nth-child(1) { top: 0px; }
-.hamburger span:nth-child(2) { top: 8px; }
-.hamburger span:nth-child(3) { top: 16px; }
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 8px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 16px;
+}
 
 .hamburger.open span:nth-child(1) {
   top: 8px;
   transform: rotate(135deg);
 }
+
 .hamburger.open span:nth-child(2) {
   opacity: 0;
   left: -60px;
 }
+
 .hamburger.open span:nth-child(3) {
   top: 8px;
   transform: rotate(-135deg);
 }
 
 @media (max-width: 1200px) {
-  .logoImg { height: 80px; }
+  .logoImg {
+    height: 80px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -152,13 +165,16 @@
 
   .navLinks {
     position: absolute;
-    top: 100%; /* Starts exactly below header */
+    top: 100%;
+    /* Starts exactly below header */
     left: 0;
     width: 100%;
-    height: auto; /* No longer covers full screen */
+    height: auto;
+    /* No longer covers full screen */
     background: #0F3B3B;
     flex-direction: column;
-    align-items: flex-start; /* Left aligned links like reference */
+    align-items: flex-start;
+    /* Left aligned links like reference */
     padding: 24px 32px;
     gap: 20px;
     visibility: hidden;
@@ -166,8 +182,8 @@
     transform: translateY(-10px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    border-top: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   .navLinksOpen {
@@ -178,7 +194,8 @@
 
   .link {
     color: white;
-    font-size: 18px; /* Slightly smaller to match list-style */
+    font-size: 18px;
+    /* Slightly smaller to match list-style */
     padding: 8px 0;
     width: 100%;
   }
@@ -196,11 +213,13 @@
     width: 100%;
     margin-top: 10px;
     padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .logoImg { height: 60px; }
-  
+  .logoImg {
+    height: 60px;
+  }
+
   /* When menu is open, make sure header background stays solid */
   .navbar {
     background: white;
