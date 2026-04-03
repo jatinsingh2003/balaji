@@ -65,7 +65,7 @@ export default function About() {
         <div className={styles.heroContent}>
           <h1 className={styles.title}>About Balaji PhysioCity</h1>
           <p className={styles.subtitle}>
-            India's fastest growing delivery network of premium physiotherapy and chiropractic services.
+            India's fastest growing network of premium physiotherapy and chiropractic services.
           </p>
         </div>
       </section>
@@ -126,23 +126,23 @@ export default function About() {
             <h2 className={styles.sectionTitle}>Our Visionaries</h2>
           </div>
           <div className={styles.leaderCard}>
-            <div style={{ 
-              width: '240px', 
-              height: '240px', 
-              background: 'white', 
-              borderRadius: '50%', 
-              margin: '0 auto', 
-              border: '8px solid #f0f7f5', 
+            <div style={{
+              width: '240px',
+              height: '240px',
+              background: 'white',
+              borderRadius: '50%',
+              margin: '0 auto',
+              border: '8px solid #f0f7f5',
               boxShadow: '0 10px 30px rgba(17, 115, 102, 0.15)',
               overflow: 'hidden',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center'
             }}>
-              <img 
-                src="/director.jpeg" 
-                alt="Dr. Vivek Kumar Singh" 
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+              <img
+                src="/director.jpeg"
+                alt="Dr. Vivek Kumar Singh"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
             <h3 className={styles.leaderName}>Dr. Vivek Kumar Singh</h3>
@@ -176,19 +176,19 @@ export default function About() {
           <h2 className={styles.sectionTitle}>Ready to start your journey?</h2>
           <p className={styles.description}>Connect with a specialist today and experience professional Clinical Excellence.</p>
           <div style={{ marginTop: '40px', display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a 
-              href="https://wa.me/919452791291" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="btn-primary" 
+            <a
+              href="https://wa.me/919452791291"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
               style={{ padding: '16px 36px', borderRadius: '50px', display: 'flex', alignItems: 'center', gap: '10px' }}
             >
               <img src="/logo.png" alt="" style={{ height: '20px', filter: 'brightness(0) invert(1)' }} />
               WhatsApp Consult
             </a>
-            <a 
-              href="tel:+919452791291" 
-              className="btn-secondary" 
+            <a
+              href="tel:+919452791291"
+              className="btn-secondary"
               style={{ padding: '14px 34px', borderRadius: '50px', display: 'flex', alignItems: 'center', gap: '10px' }}
             >
               <img src="/phone-call.png" alt="" style={{ height: '20px', filter: 'brightness(0) saturate(100%) invert(35%) sepia(35%) saturate(769%) hue-rotate(124deg) brightness(97%) contrast(83%)' }} />
