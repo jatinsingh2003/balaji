@@ -43,12 +43,47 @@ export default function Therapies() {
       img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDrbGdE3W12h2Zb2HMN0ndVf7-H75JW6pjGFRYQBh4sDu0omntKZOkAnAeluWp18Y3kYCJDxTg1qDMNn2M9iOhOP1HVL4CS4mqZPd34tp9bSLCAB5SauMlr8esu0HgY91oGXfS0GnSyCHVD62VqWQMGidvsLnotTPNkfvw7-oLKFeK7unQNkcHYd9r_DlD_QjBoLGwFdy9IdCqKh4Fa2b4qauoGMZhQ4DvoWdwxnZTm5T7yok4AUaUL1SFnVAJqNLzfIcJ6YEO1Dtcx",
       desc: "Precise insertion of fine needles into myofascial trigger points to release muscle knots and chronic tension."
     },
-    {
-      name: "Lymphatic Drainage",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBASYO710JS-HmfnCiSk96AmX4HLXJP8o3KyM0GEJQjMZvpHCchrYF_LRbPvCcfaQKLuQSUl5wKI0aLh1aqgyPDMfPczDZ2fx7S7HoD0jYJ7YXh6IIRUX6IKxdmXzPtfqCcZsv_4t6KBqWyk_gwzxyteo4ItCZKPLa7EDmYXo1ySkvjMs8Rps-FzAUbmRVPBQVpKlf7UdMsdbtztTIJ38pcd8EjMwhli4ydxjmo29skXDUZh4gvVq2J-mtSPKmZA6C--ybIq2Cz9hS1",
-      desc: "Specialized manual therapy designed to encourage the natural drainage of the lymph to reduce post-surgical swelling."
-    },
-  ];
+      {
+        name: "Lymphatic Drainage",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBASYO710JS-HmfnCiSk96AmX4HLXJP8o3KyM0GEJQjMZvpHCchrYF_LRbPvCcfaQKLuQSUl5wKI0aLh1aqgyPDMfPczDZ2fx7S7HoD0jYJ7YXh6IIRUX6IKxdmXzPtfqCcZsv_4t6KBqWyk_gwzxyteo4ItCZKPLa7EDmYXo1ySkvjMs8Rps-FzAUbmRVPBQVpKlf7UdMsdbtztTIJ38pcd8EjMwhli4ydxjmo29skXDUZh4gvVq2J-mtSPKmZA6C--ybIq2Cz9hS1",
+        desc: "Specialized manual therapy designed to encourage the natural drainage of the lymph to reduce post-surgical swelling."
+      },
+      {
+        name: "Electrotherapy",
+        img: "/Electrotherapy.png",
+        desc: "Advanced clinical use of electrical stimulation to modulate pain, reduce edema, and restore muscle function and strength."
+      },
+      {
+        name: "Exercise Therapy",
+        img: "/Exercise Therapy.png",
+        desc: "Customized therapeutic exercise programs designed to improve mobility, strength, and overall functional performance."
+      },
+      {
+        name: "Massage Therapy",
+        img: "/Massage.png",
+        desc: "Therapeutic manipulation of soft tissues to alleviate muscle tension, improve circulation, and accelerate recovery from strain."
+      },
+      {
+        name: "PEMF Therapy",
+        img: "/Pulsing Electromagnetic Field Therapy.png",
+        desc: "Non-invasive pulsing electromagnetic fields used to stimulate cellular repair, reduce inflammation, and promote bone healing."
+      },
+      {
+        name: "Cold Therapy",
+        img: "/cold therapy.png",
+        desc: "Targeted application of cold (Cryotherapy) to reduce acute inflammation, manage pain, and decrease swelling after injury."
+      },
+      {
+        name: "Heat Therapy",
+        img: "/heat therapy.png",
+        desc: "Therapeutic application of heat to increase blood flow, relax stiff muscles, and enhance joint range of motion."
+      },
+      {
+        name: "Hydrotherapy",
+        img: "/hydrotherapy.png",
+        desc: "Utilizing water's unique physical properties to provide low-impact rehabilitation, support joints, and facilitate movement."
+      },
+    ];
 
   return (
     <main className={styles.main}>

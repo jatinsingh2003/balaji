@@ -126,8 +126,24 @@ export default function About() {
             <h2 className={styles.sectionTitle}>Our Visionaries</h2>
           </div>
           <div className={styles.leaderCard}>
-            <div style={{ width: '200px', height: '200px', background: 'white', borderRadius: '50%', margin: '0 auto', border: '5px solid #117366', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '60px' }}>
-              👨‍💼
+            <div style={{ 
+              width: '240px', 
+              height: '240px', 
+              background: 'white', 
+              borderRadius: '50%', 
+              margin: '0 auto', 
+              border: '8px solid #f0f7f5', 
+              boxShadow: '0 10px 30px rgba(17, 115, 102, 0.15)',
+              overflow: 'hidden',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <img 
+                src="/director.jpeg" 
+                alt="Dr. Vivek Kumar Singh" 
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+              />
             </div>
             <h3 className={styles.leaderName}>Dr. Vivek Kumar Singh</h3>
             <p className={styles.leaderTitle}>Founder & Director</p>
